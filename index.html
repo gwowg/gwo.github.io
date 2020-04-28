@@ -36,7 +36,7 @@
             <time v-bind:datetime="item.attributes.time">{{item.attributes.time}}</time>
         </section>
         <div class="load-ctn">
-            <button class="load-btn" v-on:click="loadMore" v-if="contents" v-cloak>再翻翻</button>
+            <button class="load-btn" v-on:click="loadMore" v-if="contents" v-cloak>看更多</button>
             <p class="tip" v-else>别急，加载呢</p>
         </div>
     </main>
@@ -114,7 +114,7 @@
         body .item {
             border-top: 6px solid #567;
             background-color: #fcfdfe;
-            color: #ccc;
+            color: #567;
         }
         body time {
             color: #aaa;
@@ -123,11 +123,11 @@
             color: #ffffff;
         }
         aside {
-            color: #ccc;
+            color: #fff;
         }
         body .load-btn {
-            background-color: #000;
-            color: #ddd;
+            background-color: #fff;
+            color: #567;
         }
         body .load-btn:hover:active {
             background: #1DA1F2;
