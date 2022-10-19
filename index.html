@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>G言G语</title>
+    <title>Y 言 G 语</title>
     <!-- <link rel="shortcut icon" href="./favicon.ico" /> -->
     <link type="text/css" rel="stylesheet" href="https://at.alicdn.com/t/font_1755564_z4mhxbw13mq.css"></link>
     <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Noto+Serif+JP:wght@300;400;900&family=Noto+Serif+SC:wght@300;400;900&display=swap"
@@ -16,7 +16,7 @@
     <meta name="google" content="index,follow"/>
     <meta name="googlebot" content="index,follow"/>
     <meta name="verify" content="index,follow"/>
-    <meta name="apple-mobile-web-app-title" content="G言G语">
+    <meta name="apple-mobile-web-app-title" content="Y 言 G 语">
     <meta name="apple-mobile-web-app-capable" content="yes"/>
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
 
@@ -202,7 +202,7 @@
             迭代中
         </p>
     </aside>
-    <p class="tip">现在总共 G 了 {{count}} 条</p>
+    <p class="tip">现在总共 YG 了 {{count}} 条</p>
     <section class="item" v-for="item in contents" v-cloak>
         <p v-html='item.attributes.content'></p>
         <span v-if="item.attributes.type != undefined" :class="[`type-${item.attributes.type}`, 'equipment']"></span>
@@ -263,7 +263,7 @@
     function getData(page = 0) {
         query.descending('createdAt').skip(page * 20).limit(20).find().then(function (results) {
             if (results.length == 0) {
-                alert('之前没 G 过了')
+                alert('之前没 YG 过了')
             } else {
                 let resC = results;
                 reqData = false;
