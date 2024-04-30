@@ -10,7 +10,7 @@
           content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
     <meta name="description" content="">
     <meta name="keywords" content=""/>
-    <meta name="author" content="daibor"/>
+    <meta name="author" content="gwo"/>
     <meta charset="utf-8"/>
     <meta name="robots" content="index,follow"/>
     <meta name="google" content="index,follow"/>
@@ -199,7 +199,7 @@
 <main id="app">
     <aside>
         <p id="describe">
-            迭代中
+            知行合一
         </p>
     </aside>
     <p class="tip">现在总共 YG 了 {{count}} 条</p>
@@ -209,12 +209,12 @@
         <time v-bind:datetime="item.attributes.time">{{item.attributes.time}}</time>
     </section>
     <div class="load-ctn">
-        <button class="load-btn" v-on:click="loadMore" v-if="contents" v-cloak>再来点</button>
-        <p class="tip" v-else>别急，加载呢</p>
+        <button class="load-btn" v-on:click="loadMore" v-if="contents" v-cloak>还有啥</button>
+        <p class="tip" v-else>等一下，在回忆</p>
     </div>
 </main>
 <footer>
-    <p class="center-text">Copyright © 2022 Gwo,All Rights Reserved</p>
+    <p class="center-text">Copyright © <time datetime="2020">2020</time> - <time datetime="now">Present</time> gwo, All Rights Reserved</p>
 </footer>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/leancloud-storage@4.5.3/dist/av-min.js"></script>
@@ -263,7 +263,7 @@
     function getData(page = 0) {
         query.descending('createdAt').skip(page * 20).limit(20).find().then(function (results) {
             if (results.length == 0) {
-                alert('之前没 YG 过了')
+                alert('There is nothing.')
             } else {
                 let resC = results;
                 reqData = false;
