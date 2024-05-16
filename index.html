@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Y 言 G 语</title>
+    <title>啁啾世界</title>
     <!-- <link rel="shortcut icon" href="./favicon.ico" /> -->
     <link type="text/css" rel="stylesheet" href="https://at.alicdn.com/t/font_1755564_z4mhxbw13mq.css"></link>
     <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Noto+Serif+JP:wght@300;400;900&family=Noto+Serif+SC:wght@300;400;900&display=swap"
@@ -12,11 +12,10 @@
     <meta name="keywords" content=""/>
     <meta name="author" content="gwo"/>
     <meta charset="utf-8"/>
-    <meta name="robots" content="index,follow"/>
-    <meta name="google" content="index,follow"/>
-    <meta name="googlebot" content="index,follow"/>
-    <meta name="verify" content="index,follow"/>
-    <meta name="apple-mobile-web-app-title" content="Y 言 G 语">
+    <meta name="robots" content="noindex,nofollow"/>
+    <meta name="google" content="noindex,nofollow"/>
+    <meta name="googlebot" content="noindex,nofollow"/>
+    <meta name="apple-mobile-web-app-title" content="啁啾世界">
     <meta name="apple-mobile-web-app-capable" content="yes"/>
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
 
@@ -174,13 +173,13 @@
 
         .type-0.equipment::after {
             float: right;
-            content: "👩🏻‍💻";
+            content: "🐤";
             font-size: 15px;
         }
 
         .type-1.equipment::after {
             float: right;
-            content: "🧑🏻‍💻";
+            content: "🐦";
             font-size: 15px;
         }
 
@@ -194,22 +193,22 @@
 
 <body>
 <header id="header">
-    <h1> Y 言 G 语</h1>
+    <h1>啁啾世界</h1>
 </header>
 <main id="app">
     <aside>
         <p id="describe">
-            知行合一
+            努力知行合一。
         </p>
     </aside>
-    <p class="tip">现在总共 YG 了 {{count}} 条</p>
+    <p class="tip">现在总共啾啾了 {{count}} 次</p>
     <section class="item" v-for="item in contents" v-cloak>
         <p v-html='item.attributes.content'></p>
         <span v-if="item.attributes.type != undefined" :class="[`type-${item.attributes.type}`, 'equipment']"></span>
         <time v-bind:datetime="item.attributes.time">{{item.attributes.time}}</time>
     </section>
     <div class="load-ctn">
-        <button class="load-btn" v-on:click="loadMore" v-if="contents" v-cloak>还有啥</button>
+        <button class="load-btn" v-on:click="loadMore" v-if="contents" v-cloak>还啾了啥</button>
         <p class="tip" v-else>等一下，在回忆</p>
     </div>
 </main>
